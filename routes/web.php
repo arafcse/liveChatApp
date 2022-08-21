@@ -19,6 +19,8 @@ Route::get('/', function () {
 
 Auth::routes();
 
+Route::match(['get', 'post'], 'botman', [App\Http\Controllers\BotmanController::class,'enterRequest']);
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('chat', [App\Http\Controllers\HomeController::class, 'chat'])->name('chat');
