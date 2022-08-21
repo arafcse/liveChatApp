@@ -29,3 +29,5 @@ Route::get('messages', [App\Http\Controllers\HomeController::class, 'messages'])
 Route::post('messages', [App\Http\Controllers\HomeController::class, 'messageStore'])
             ->name('messageStore');
 
+Route::post('post-like', [App\Http\Controllers\HomeController::class, 'postLike']);
+
